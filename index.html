@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <title>DraftMate AI | Legal Drafting Studio</title>
+
+        <link rel="stylesheet" href="style.css">
+    </head>
+
+    <body>
+
+    <div class="app">
+        <aside class="sidebar">
+
+            <div class="brand">DraftMate <span>AI</span></div>
+
+            <p class="tagline">Your Legal Drafting Studio</p>
+
+            <p class="nav-label">WORKSPACE</p>
+
+            <div class="nav-item active">✦ New Document</div>
+            <div class="nav-item">▤ My Documents</div>
+            <div class="nav-item">✓ Citation Review</div>
+            <div class="nav-item">⚙ Settings</div>
+
+        </aside>
+        <main class="main">
+
+            <header class="topbar">
+
+                <div>
+                    <div class="eyebrow">AI LEGAL WORKSPACE</div>
+
+                    <h1>What are we drafting today?</h1>
+
+                    <p class="subtitle">
+                        Create, review, and improve legal documents
+                        with AI assistance.
+                    </p>
+                </div>
+
+                <div class="status">● Workspace Ready</div>
+
+            </header>
+
+            <section class="workspace">
+
+                <div class="card">
+
+                    <h2>Create a legal document</h2>
+
+                    <p class="card-description">
+                        Choose a task and describe what you need.
+                        We'll help turn your instructions into a draft.
+                    </p>
+
+                    <label for="skill">Choose a legal skill</label>
+
+                    <select id="skill">
+
+                        <option value="draft">Legal Document Drafting</option>
+                        <option value="review">Contract Review</option>
+                        <option value="summarize">Document Summarization</option>
+
+                    </select>
+
+
+                    <label for="instructions">Your instructions</label>
+
+                    <textarea
+                        id="instructions"
+                        placeholder="Example: Draft a basic rental agreement between a landlord and a tenant..."
+                    ></textarea>
+                    <div class="upload-section">
+                      <label for="documentUpload">Upload an existing document (.txt)</label>
+                       <input
+                       type="file"
+                       id="documentUpload"
+                        accept=".txt,text/plain"
+                      >
+                      <p id="uploadStatus">No document selected.</p>
+                    </div>
+
+                    <button id="generateButton" class="primary-button">
+                        Generate Document →
+                    </button>
+
+                    <p class="small-note">
+                        AI-generated drafts require human review.
+                        Verify legal references before relying on them.
+                    </p>
+
+                </div>
+
+
+                <!-- Document preview -->
+                <div class="card">
+
+                    <h2>Document Preview</h2>
+
+                    <p class="card-description">
+                        Your generated document will appear here.
+                    </p>
+
+                    <div id="output" class="document-preview">
+                    </div>
+                    <button id="downloadPdfButton" type="button" disabled>Download PDF</button>
+
+                    <p class="small-note">
+                        Generated content will need to be reviewed
+                        before use.
+                    </p>
+
+                </div>
+
+            </section>
+
+        </main>
+
+    </div>
+<script src="script.js">
+</script>
+</body>
+</html>
